@@ -1,0 +1,8 @@
+# 应用服务的名称
+spring:
+  application:
+    name: grpc-server
+# grpc服务端口的信息
+grpc:
+  server:
+    port: 9999

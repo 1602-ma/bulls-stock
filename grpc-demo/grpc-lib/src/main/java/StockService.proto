@@ -1,0 +1,28 @@
+// Proto 版本
+syntax="proto3";
+
+// Proto生成的配置属性
+option java_multiple_files= true;
+option java_package = "com.itcast.grpc.lib";
+option java_outer_classname ="StockServiceProto";
+
+// 定义Grpc接口
+service StockService {
+    // 定义股票价格访问的接口
+    rpc GetStockPrice (StockServiceRequest) returns (StockServiceReply) {
+
+    }
+}
+
+// 请求的数据结构体
+message StockServiceRequest {
+    // 股票的名称
+    string name = 1;
+}
+
+// 响应返回的数据结构体
+message StockServiceReply {
+    string message = 1;
+}
+
+
